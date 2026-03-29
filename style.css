@@ -270,26 +270,20 @@ footer {
   object-fit: cover;
   object-position: right center;
   display: block;
+    -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 30%,
+    black 100%
+  );
+   mask-image: linear-gradient( 
+    to right,
+    transparent 0%,
+    black 30%,
+    black 100%
+  );
 }
 
 /* Degradado encima de la imagen, lado izquierdo */
-/*
-.hero-imagen::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 60%;
-  height: 100%;
-  background: linear-gradient(
-    to right,
-    var(--negro) 0%,
-    var(--negro) 20%,
-    rgba(5, 10, 15, 0.8) 40%,
-    rgba(5, 10, 15, 0.4) 60%,
-    transparent 100%
-  );
-  z-index: 1;
-}
 
-*/
+
