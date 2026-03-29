@@ -229,6 +229,50 @@ footer {
   text-shadow: 0 0 8px var(--verde);
 }
 
+
+/* ========================================
+   PARTES ESPECIFICAS
+   ======================================== */
+
+
+
+
+
+
+/* HERO - título e imagen lado a lado */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.hero-texto {
+  flex: 1;
+}
+
+/* Contenedor de la imagen con degradado */
+.hero-imagen {
+  position: relative;
+  flex: 1;
+}
+
+.hero-imagen img {
+  width: 100%;
+  display: block;
+}
+
+/* Degradado encima de la imagen, lado izquierdo */
+.hero-imagen::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(to right, var(--negro), transparent);
+  z-index: 1;
+}
 .highlight-azul {
   color: var(--azul);
   text-shadow: 0 0 8px var(--azul);
