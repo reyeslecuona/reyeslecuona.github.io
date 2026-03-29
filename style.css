@@ -1,1 +1,228 @@
+/* ========================================
+   ESTILO TECNOLÓGICO — Verde, Azul, Negro
+   ======================================== */
 
+/* Fuentes tecnológicas */
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Orbitron:wght@400;700&display=swap');
+
+/* Variables de color */
+:root {
+  --negro:       #050a0f;
+  --negro2:      #0a1520;
+  --superficie:  #0f1e2e;
+  --borde:       #1a3a4a;
+  --verde:       #00ff88;
+  --verde2:      #00cc66;
+  --azul:        #00aaff;
+  --azul2:       #0066cc;
+  --texto:       #c8e8f0;
+  --texto-muted: #4a7a8a;
+  --fuente-titulo: 'Orbitron', sans-serif;
+  --fuente-cuerpo: 'Share Tech Mono', monospace;
+}
+
+/* Reset básico */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Body */
+body {
+  background-color: var(--negro);
+  color: var(--texto);
+  font-family: var(--fuente-cuerpo);
+  font-size: 16px;
+  line-height: 1.7;
+  min-height: 100vh;
+
+  /* Cuadrícula tecnológica de fondo */
+  background-image:
+    linear-gradient(var(--borde) 1px, transparent 1px),
+    linear-gradient(90deg, var(--borde) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+/* Títulos */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--fuente-titulo);
+  color: var(--verde);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin-bottom: 0.8rem;
+}
+
+h1 { font-size: 2.5rem; text-shadow: 0 0 20px var(--verde); }
+h2 { font-size: 1.8rem; color: var(--azul); }
+h3 { font-size: 1.3rem; color: var(--verde2); }
+
+/* Párrafos */
+p {
+  color: var(--texto);
+  margin-bottom: 1rem;
+}
+
+/* Enlaces */
+a {
+  color: var(--azul);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: color 0.2s, border-color 0.2s;
+}
+
+a:hover {
+  color: var(--verde);
+  border-bottom-color: var(--verde);
+}
+
+/* Contenedor principal */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* HEADER / NAVEGACIÓN */
+header {
+  background: rgba(5, 10, 15, 0.9);
+  border-bottom: 1px solid var(--verde);
+  padding: 1.2rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  backdrop-filter: blur(8px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav a {
+  margin-left: 2rem;
+  font-family: var(--fuente-titulo);
+  font-size: 0.75rem;
+  letter-spacing: 2px;
+  color: var(--texto-muted);
+  border: none;
+  transition: color 0.2s;
+}
+
+nav a:hover {
+  color: var(--verde);
+}
+
+/* SECCIONES */
+section {
+  padding: 5rem 2rem;
+}
+
+/* TARJETAS */
+.card {
+  background: var(--superficie);
+  border: 1px solid var(--borde);
+  border-left: 3px solid var(--verde);
+  padding: 2rem;
+  margin-bottom: 1.5rem;
+  position: relative;
+  transition: border-color 0.3s, transform 0.2s;
+}
+
+.card:hover {
+  border-left-color: var(--azul);
+  transform: translateX(4px);
+}
+
+/* Esquina decorativa en tarjetas */
+.card::before {
+  content: '';
+  position: absolute;
+  top: -1px;
+  right: -1px;
+  width: 14px;
+  height: 14px;
+  border-top: 2px solid var(--verde);
+  border-right: 2px solid var(--verde);
+}
+
+/* BOTONES */
+.btn {
+  font-family: var(--fuente-titulo);
+  font-size: 0.75rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 0.8rem 2rem;
+  border: 1px solid var(--verde);
+  color: var(--verde);
+  background: transparent;
+  cursor: pointer;
+  position: relative;
+  transition: background 0.2s, color 0.2s;
+  display: inline-block;
+}
+
+.btn:hover {
+  background: var(--verde);
+  color: var(--negro);
+}
+
+.btn-azul {
+  border-color: var(--azul);
+  color: var(--azul);
+}
+
+.btn-azul:hover {
+  background: var(--azul);
+  color: var(--negro);
+}
+
+/* ETIQUETAS / BADGES */
+.badge {
+  font-size: 0.7rem;
+  font-family: var(--fuente-titulo);
+  letter-spacing: 1px;
+  padding: 0.2rem 0.7rem;
+  border: 1px solid var(--verde2);
+  color: var(--verde2);
+  display: inline-block;
+  margin: 0.2rem;
+}
+
+/* LÍNEA DIVISORA */
+hr {
+  border: none;
+  border-top: 1px solid var(--borde);
+  margin: 3rem 0;
+  position: relative;
+}
+
+hr::after {
+  content: '◆';
+  position: absolute;
+  top: -9px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--negro);
+  color: var(--verde);
+  padding: 0 0.5rem;
+  font-size: 0.8rem;
+}
+
+/* FOOTER */
+footer {
+  border-top: 1px solid var(--verde);
+  padding: 2rem;
+  text-align: center;
+  color: var(--texto-muted);
+  font-size: 0.8rem;
+}
+
+/* TEXTO RESALTADO (efecto terminal) */
+.highlight {
+  color: var(--verde);
+  text-shadow: 0 0 8px var(--verde);
+}
+
+.highlight-azul {
+  color: var(--azul);
+  text-shadow: 0 0 8px var(--azul);
+}
