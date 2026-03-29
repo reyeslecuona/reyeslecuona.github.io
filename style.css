@@ -261,7 +261,7 @@ footer {
 /* Contenedor de la imagen */
 .hero-imagen {
   position: relative;
-  width: 45%;
+  width: 30%;
   flex-shrink: 0;
 }
 
