@@ -255,6 +255,7 @@ footer {
   display: flex;
   flex-direction: column;
   justify-content: center;
+padding-top: 8rem;
 }
 
 /* Contenedor de la imagen */
@@ -271,16 +272,20 @@ footer {
   object-position: right center;
   display: block;
     -webkit-mask-image: linear-gradient(
-    to right,
-    transparent 0%,
-    black 40%,
-    black 100%
+    to bottom right,
+      transparent 0%,
+     rgba(0,0,0,0.2) 20%,
+     rgba(0,0,0,0.6) 40%,
+     black 80%,
+     black 100%
   );
    mask-image: linear-gradient( 
-    to right,
-    transparent 0%,
-    black 90%,
-    black 100%
+    to bottom right,
+     transparent 0%,
+     rgba(0,0,0,0.2) 20%,
+     rgba(0,0,0,0.6) 40%,
+     black 80%,
+     black 100%
   );
 }
 
