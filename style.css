@@ -274,6 +274,7 @@ footer {
 }
 
 /* Degradado encima de la imagen, lado izquierdo */
+/*
 .hero-imagen::before {
   content: '';
   position: absolute;
@@ -291,3 +292,5 @@ footer {
   );
   z-index: 1;
 }
+
+*/
