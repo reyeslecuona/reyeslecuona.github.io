@@ -272,18 +272,18 @@ padding-top: 8rem;
   object-position: right center;
   display: block;
     -webkit-mask-image: linear-gradient(
-    to bottom right,
+   120deg,
       transparent 0%,
-     rgba(0,0,0,0.2) 20%,
-     rgba(0,0,0,0.6) 40%,
+     rgba(0,0,0,0.1) 20%,
+     rgba(0,0,0,0.5) 40%,
      black 80%,
      black 100%
   );
    mask-image: linear-gradient( 
-    to bottom right,
-     transparent 0%,
-     rgba(0,0,0,0.2) 20%,
-     rgba(0,0,0,0.6) 40%,
+    120deg,
+      transparent 0%,
+     rgba(0,0,0,0.1) 20%,
+     rgba(0,0,0,0.5) 40%,
      black 80%,
      black 100%
   );
