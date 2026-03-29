@@ -279,7 +279,7 @@ footer {
    mask-image: linear-gradient( 
     to right,
     transparent 0%,
-    black 70%,
+    black 90%,
     black 100%
   );
 }
