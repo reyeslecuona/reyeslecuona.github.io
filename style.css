@@ -287,3 +287,36 @@ body::after {
   z-index:5;
 }
 
+
+
+
+
+
+
+
+@media (max-width: 768px) {
+  .rpo-hero {
+    flex-direction: column;
+    padding: 40px 20px;
+    min-height: auto;
+  }
+
+  .rpo-title {
+    font-size: 32px;
+  }
+
+  .rpo-deco {
+    width: 40vw;
+    height: 40vw;
+  }
+
+  .rpo-nav-links {
+    display: none;
+  }
+
+  .rpo-cards {
+    grid-template-columns: repeat(3, 1fr);
+    padding: 16px 20px;
+  }
+}
+
