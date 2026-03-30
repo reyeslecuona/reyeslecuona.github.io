@@ -159,42 +159,42 @@ body::after {
 }
 
 .rpo-deco {
-  position:relative;
-  width:160px;
-  height:160px;
-  flex-shrink:0;
+  position: relative;
+  width: 15vw;
+  height: 15vw;
+  flex-shrink: 0;
 }
 
 .rpo-hex {
-  width:120px;
-  height:120px;
-  border:1px solid rgba(0,255,180,0.3);
-  transform:rotate(45deg);
-  position:absolute;
-  top:20px;
-  left:20px;
+  width: 80%;
+  height: 80%;
+  border: 1px solid rgba(0,255,180,0.3);
+  transform: rotate(45deg);
+  position: absolute;
+  top: 10%;
+  left: 10%;
 }
 
 .rpo-hex2 {
-  width:80px;
-  height:80px;
-  border:1px solid rgba(255,0,170,0.4);
-  transform:rotate(45deg);
-  position:absolute;
-  top:40px;
-  left:40px;
-  animation:spin 8s linear infinite;
+  width: 55%;
+  height: 55%;
+  border: 1px solid rgba(255,0,170,0.4);
+  transform: rotate(45deg);
+  position: absolute;
+  top: 22%;
+  left: 22%;
+  animation: spin 8s linear infinite;
 }
 
 .rpo-center-dot {
-  width:12px;
-  height:12px;
-  background:#00ffb4;
-  border-radius:50%;
-  position:absolute;
-  top:74px;
-  left:74px;
-  box-shadow:0 0 12px #00ffb4;
+  width: 8%;
+  height: 8%;
+  background: #00ffb4;
+  border-radius: 50%;
+  position: absolute;
+  top: 46%;
+  left: 46%;
+  box-shadow: 0 0 12px #00ffb4;
 }
 
 @keyframes spin { to { transform:rotate(225deg); } }
