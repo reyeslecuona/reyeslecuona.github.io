@@ -343,7 +343,8 @@ body::after {
   width: 20%;
   flex-shrink: 0;
   overflow: hidden;
-  height: 290px;
+  height: 340px;
+  object-position: center center;
 }
 
 .skills-group-title {
