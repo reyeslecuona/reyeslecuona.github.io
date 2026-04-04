@@ -322,8 +322,9 @@ body::after {
 }
 
 .skills-layout {
-  display:flex;
-  align-items:stretch;
+  display: flex;
+  align-items: stretch;
+  height: 290px;
 }
 
 .skills-groups {
@@ -338,9 +339,10 @@ body::after {
 }
 
 .skills-img-wrap {
-  width:20%;
-  flex-shrink:0;
-  overflow:hidden;
+  width: 20%;
+  flex-shrink: 0;
+  overflow: hidden;
+  height: 290px;
 }
 
 .skills-group-title {
@@ -390,10 +392,10 @@ body::after {
 
 
 .skills-img-wrap img {
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  object-position:center;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
 }
 
 .solo-pc { display:block; }
