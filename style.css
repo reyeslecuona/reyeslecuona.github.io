@@ -418,6 +418,33 @@ body::after {
   z-index: 5;
 }
 
+
+.skills-layout {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+}
+
+.skills-img {
+  width: 250px;
+  flex-shrink: 0;
+  object-fit: cover;
+}
+
+.solo-pc {
+  display: block;
+}
+
+@media (max-width: 767px) {
+  .solo-pc {
+    display: none;
+  }
+
+  .skills-layout {
+    flex-direction: column;
+  }
+}
+
 @media (min-width: 768px) {
   .skills-section .skills-groups {
     display: grid;
@@ -431,3 +458,10 @@ body::after {
     padding: 40px 20px;
   }
 }
+
+
+
+
+
+
+
