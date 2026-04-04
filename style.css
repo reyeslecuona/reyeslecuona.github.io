@@ -421,16 +421,27 @@ body::after {
 
 .skills-layout {
   display: flex;
-  gap: 40px;
-  align-items: flex-start;
+  gap: 0;
+  align-items: stretch;
+}
+
+.skills-groups {
+  display: flex;
+  width: 66.66%;
+}
+
+.skills-groups .skills-group {
+  width: 50%;
+  padding: 0 20px;
 }
 
 .skills-img {
-  width: 250px;
+  width: 33.33%;
   flex-shrink: 0;
   object-fit: cover;
+  object-position: center;
+  align-self: stretch;
 }
-
 .solo-pc {
   display: block;
 }
