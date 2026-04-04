@@ -414,4 +414,18 @@ body::after {
   .skills-section {
     padding: 40px 20px;
   }
+
+  .skills-section {
+  padding: 60px 32px;
+  position: relative;
+  z-index: 5;
+}
+
+@media (min-width: 768px) {
+  .skills-section .skills-groups {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+}
 }
