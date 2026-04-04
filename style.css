@@ -411,12 +411,7 @@ body::after {
   border-right: 1px solid #ff00aa;
 }
 
-@media (max-width: 768px) {
-  .skills-section {
-    padding: 40px 20px;
-  }
-
-  .skills-section {
+.skills-section {
   padding: 60px 32px;
   position: relative;
   z-index: 5;
@@ -428,5 +423,12 @@ body::after {
     grid-template-columns: 1fr 1fr;
     gap: 40px;
   }
+}
+
+@media (max-width: 767px) {
+  .skills-section {
+    padding: 40px 20px;
+  }
+}
 }
 }
