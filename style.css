@@ -328,13 +328,19 @@ body::after {
 
 .skills-groups {
   display:flex;
-  width:66.66%;
+  width:80%;
 }
 
 .skills-groups .skills-group {
   width:50%;
   padding:0 20px;
   margin-bottom:0;
+}
+
+.skills-img-wrap {
+  width:20%;
+  flex-shrink:0;
+  overflow:hidden;
 }
 
 .skills-group-title {
@@ -382,11 +388,6 @@ body::after {
   border-right:1px solid #ff00aa;
 }
 
-.skills-img-wrap {
-  width:33.33%;
-  flex-shrink:0;
-  overflow:hidden;
-}
 
 .skills-img-wrap img {
   width:100%;
