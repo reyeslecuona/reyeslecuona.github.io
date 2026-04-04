@@ -320,3 +320,98 @@ body::after {
   }
 }
 
+
+
+
+
+
+
+
+.skills-section {
+  padding: 60px 32px;
+  position: relative;
+  z-index: 5;
+}
+
+.skills-header {
+  margin-bottom: 32px;
+}
+
+.skills-num {
+  font-size: 9px;
+  letter-spacing: 4px;
+  color: #ff00aa;
+  text-shadow: 0 0 8px #ff00aa;
+  margin-bottom: 8px;
+}
+
+.skills-title {
+  font-size: 28px;
+  font-weight: 900;
+  color: #00ffb4;
+  text-shadow: 0 0 20px #00ffb4;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+}
+
+.skills-line {
+  width: 60px;
+  height: 1px;
+  background: #00ffb4;
+  margin-top: 12px;
+  box-shadow: 0 0 6px #00ffb4;
+}
+
+.skills-group {
+  margin-bottom: 32px;
+}
+
+.skills-group-title {
+  font-size: 9px;
+  letter-spacing: 4px;
+  color: rgba(0,255,180,0.5);
+  text-transform: uppercase;
+  margin-bottom: 12px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid rgba(0,255,180,0.15);
+}
+
+.skill-item {
+  font-size: 11px;
+  letter-spacing: 2px;
+  color: rgba(0,255,180,0.5);
+  padding: 10px 14px;
+  margin-bottom: 6px;
+  text-transform: uppercase;
+}
+
+.skill-item.destacado {
+  color: #00ffb4;
+  border: 1px solid rgba(0,255,180,0.4);
+  position: relative;
+  background: rgba(0,255,180,0.04);
+}
+
+.skill-item.destacado::before {
+  content: '';
+  position: absolute;
+  top: -1px; left: -1px;
+  width: 8px; height: 8px;
+  border-top: 1px solid #00ffb4;
+  border-left: 1px solid #00ffb4;
+}
+
+.skill-item.destacado::after {
+  content: '';
+  position: absolute;
+  bottom: -1px; right: -1px;
+  width: 8px; height: 8px;
+  border-bottom: 1px solid #ff00aa;
+  border-right: 1px solid #ff00aa;
+}
+
+@media (max-width: 768px) {
+  .skills-section {
+    padding: 40px 20px;
+  }
+}
