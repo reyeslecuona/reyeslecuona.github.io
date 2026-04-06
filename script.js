@@ -35,7 +35,7 @@ const cats = [
     { icon: `<img src="icons/3dmax.png" width="30" height="30">`, start:2022, d:false },
   ]},
    { title:'// Microsoft', items:[
-    { icon: `<img src="https://iconos8.es/icons/set/microsoft-word.svg.png" width="30" height="30">`, start:2017, d:true },
+    { icon: `<img src="icons/word.png" width="30" height="30">`, start:2017, d:true },
     { icon: `<img src="https://icons.veryicon.com/png/o/application/skills-section/microsoft-excel-10.png.svg.png" width="30" height="30">`, start:2019, d:true },
     { icon: `<img src="https://cdn-icons-png.flaticon.com/512/732/732074.png.svg.png" width="30" height="30">`, start:2018, d:true },
   ]},
