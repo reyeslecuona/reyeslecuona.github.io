@@ -1,7 +1,8 @@
 const year = new Date().getFullYear();
 const y = s => Math.max(1, year - s) + ' años';
 const di = name => `<i class="devicon-${name}"></i>`;
-const si = name => `<img src="https://cdn.simpleicons.org/${name}" width="22" height="22">`;
+const si = name => `<img src="https://cdn.simpleicons.org/${name}" width="30" height="30">`;
+const li = name => `<img src="icons/${name}" width="30" height="30" class="icon-local">`;
 
 const cats = [
   { title:'// Google', items:[
@@ -10,7 +11,6 @@ const cats = [
     { icon: si('googledrive'), start:2019, d:true },
     { icon: si('googledocs'), start:2019, d:true },
     { icon: si('googleslides'), start:2020, d:true },
-
   ]},
   { title:'// Código', items:[
     { icon: di('html5-plain'), start:2023, d:true },
@@ -28,16 +28,16 @@ const cats = [
     { icon: si('playcanvas'), start:2025, d:false },
   ]},
   { title:'// Diseño', items:[
-    { icon: `<img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Canva_icon_2021.svg" width="30" height="30">`, start:2021, d:true },
+    { icon: li('canva.png'), start:2021, d:true },
     { icon: di('figma-plain'), start:2023, d:true },
     { icon: si('notion'), start:2022, d:true },
-    { icon: `<img src="ícosns/pureref.png" width="30" height="30">`, start:2024, d:false },
-    { icon: `<img src="icons/3dmax.png" width="30" height="30">`, start:2022, d:false },
+    { icon: li('pureref.png'), start:2024, d:false },
+    { icon: li('3dmax.png'), start:2022, d:false },
   ]},
-   { title:'// Microsoft', items:[
-    { icon: `<img src="icons/word.png" width="30" height="30">`, start:2017, d:true },
-    { icon: `<img src="https://icons.veryicon.com/png/o/application/skills-section/microsoft-excel-10.png.svg.png" width="30" height="30">`, start:2019, d:true },
-    { icon: `<img src="https://cdn-icons-png.flaticon.com/512/732/732074.png.svg.png" width="30" height="30">`, start:2018, d:true },
+  { title:'// Microsoft', items:[
+    { icon: li('word.png'), start:2017, d:true },
+    { icon: li('excel.png'), start:2019, d:true },
+    { icon: li('powerpoint.png'), start:2018, d:true },
   ]},
   { title:'// Adobe', items:[
     { icon: di('photoshop-plain'), start:2022, d:false },
