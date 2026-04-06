@@ -10,7 +10,7 @@ const cats = [
     { icon: si('googledrive'), start:2019, d:true },
     { icon: si('googledocs'), start:2019, d:true },
     { icon: si('googleslides'), start:2020, d:true },
-    { icon: si('google'), start:2024, d:false },
+
   ]},
   { title:'// Código', items:[
     { icon: di('html5-plain'), start:2023, d:true },
@@ -35,10 +35,10 @@ const cats = [
     { icon: si('filmora'), start:2021, d:true },
     { icon: si('autodesk'), start:2022, d:false },
   ]},
-  { title:'// Microsoft', items:[
-    { icon: si('microsoftword'), start:2017, d:true },
-    { icon: si('microsoftexcel'), start:2019, d:true },
-    { icon: si('microsoftpowerpoint'), start:2018, d:true },
+   { title:'// Microsoft', items:[
+    { icon: `<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Microsoft_Office_Word_%282019%E2%80%932025%29.svg/3840px-Microsoft_Office_Word_%282019%E2%80%932025%29.svg.png" width="30" height="30">`, start:2017, d:true },
+    { icon: `<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Microsoft_Office_Excel_%282019%E2%80%932025%29.svg/3840px-Microsoft_Office_Excel_%282019%E2%80%932025%29.svg.png" width="30" height="30">`, start:2019, d:true },
+    { icon: `<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Microsoft_Office_PowerPoint_%282019%E2%80%932025%29.svg/3840px-Microsoft_Office_PowerPoint_%282019%E2%80%932025%29.svg.png" width="30" height="30">`, start:2018, d:true },
   ]},
   { title:'// Adobe', items:[
     { icon: di('photoshop-plain'), start:2022, d:false },
