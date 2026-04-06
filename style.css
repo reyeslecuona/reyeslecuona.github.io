@@ -476,8 +476,8 @@ body::after {
 }
 
 .sw-cat-title {
-  font-size: 8px;
-  letter-spacing: 3px;
+  font-size: 9px;
+  letter-spacing: 4px;
   color: rgba(0,255,180,0.5);
   text-transform: uppercase;
   margin-bottom: 10px;
@@ -531,8 +531,8 @@ body::after {
 .sw-icon img { width: 22px; height: 22px; }
 
 .sw-years {
-  font-size: 8px;
-  letter-spacing: 1px;
+  font-size: 11px;
+  letter-spacing: 2px;
   color: rgba(0,255,180,0.5);
   white-space: nowrap;
 }
