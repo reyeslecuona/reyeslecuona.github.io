@@ -1,6 +1,6 @@
 const year = new Date().getFullYear();
 const y = s => Math.max(1, year - s) + ' años';
-const di = name => `<i class="devicon-${name} colored"></i>`;
+const di = name => `<i class="devicon-${name}"></i>`;
 const si = name => `<img src="https://cdn.simpleicons.org/${name}" width="22" height="22">`;
 
 const cats = [
