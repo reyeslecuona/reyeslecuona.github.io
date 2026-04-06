@@ -527,8 +527,16 @@ body::after {
   justify-content: center;
 }
 
-.sw-icon i { font-size: 22px; }
-.sw-icon img { width: 22px; height: 22px; }
+.sw-icon i {
+  font-size: 22px;
+  color: #00ffb4;
+}
+
+.sw-icon img {
+  width: 22px;
+  height: 22px;
+  filter: brightness(0) saturate(100%) invert(87%) sepia(40%) saturate(500%) hue-rotate(100deg);
+}
 
 .sw-years {
   font-size: 12px;
