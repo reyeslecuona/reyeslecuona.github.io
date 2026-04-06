@@ -388,7 +388,7 @@ body::after {
   width:20%;
   flex-shrink:0;
   overflow:hidden;
-  height:360px;
+  height:380px;
 }
 
 .skills-img-wrap img {
