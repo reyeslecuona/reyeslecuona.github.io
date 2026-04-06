@@ -549,9 +549,6 @@ body::after {
 .sw-program.destacado .sw-years {
   color: rgba(0,255,180,0.8);
 }
-.icon-local {
-  filter: none;
-}
 
 @media (max-width: 767px) {
   .sw-section { padding: 40px 20px; }
