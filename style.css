@@ -418,7 +418,133 @@ body::after {
   .solo-pc { display:none; }
 }
 
+.sw-section {
+  padding: 60px 32px;
+  position: relative;
+  z-index: 5;
+}
 
+.sw-header {
+  margin-bottom: 24px;
+}
+
+.sw-num {
+  font-size: 9px;
+  letter-spacing: 4px;
+  color: #ff00aa;
+  text-shadow: 0 0 8px #ff00aa;
+  margin-bottom: 8px;
+}
+
+.sw-title {
+  font-size: 28px;
+  font-weight: 900;
+  color: #00ffb4;
+  text-shadow: 0 0 20px #00ffb4;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+}
+
+.sw-line {
+  width: 60px;
+  height: 1px;
+  background: #00ffb4;
+  margin-top: 12px;
+  box-shadow: 0 0 6px #00ffb4;
+}
+
+.sw-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.sw-category {
+  border: 1px solid rgba(0,255,180,0.15);
+  padding: 12px;
+  position: relative;
+  background: rgba(0,255,180,0.02);
+}
+
+.sw-category::before {
+  content: '';
+  position: absolute;
+  top: -1px; left: -1px;
+  width: 10px; height: 10px;
+  border-top: 1px solid #00ffb4;
+  border-left: 1px solid #00ffb4;
+}
+
+.sw-cat-title {
+  font-size: 8px;
+  letter-spacing: 3px;
+  color: rgba(0,255,180,0.5);
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid rgba(0,255,180,0.15);
+}
+
+.sw-program {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 5px 6px;
+  margin-bottom: 3px;
+  border: 1px solid transparent;
+  position: relative;
+}
+
+.sw-program.destacado {
+  border: 1px solid rgba(0,255,180,0.4);
+  background: rgba(0,255,180,0.04);
+}
+
+.sw-program.destacado::before {
+  content: '';
+  position: absolute;
+  top: -1px; left: -1px;
+  width: 6px; height: 6px;
+  border-top: 1px solid #00ffb4;
+  border-left: 1px solid #00ffb4;
+}
+
+.sw-program.destacado::after {
+  content: '';
+  position: absolute;
+  bottom: -1px; right: -1px;
+  width: 6px; height: 6px;
+  border-bottom: 1px solid #ff00aa;
+  border-right: 1px solid #ff00aa;
+}
+
+.sw-icon {
+  width: 26px;
+  height: 26px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sw-icon i { font-size: 22px; }
+.sw-icon img { width: 22px; height: 22px; }
+
+.sw-years {
+  font-size: 8px;
+  letter-spacing: 1px;
+  color: rgba(0,255,180,0.5);
+  white-space: nowrap;
+}
+
+.sw-program.destacado .sw-years {
+  color: rgba(0,255,180,0.8);
+}
+
+@media (max-width: 767px) {
+  .sw-section { padding: 40px 20px; }
+  .sw-grid { grid-template-columns: repeat(2, 1fr); }
+}
 
 
 
