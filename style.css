@@ -529,13 +529,12 @@ body::after {
 
 .sw-icon i {
   font-size: 22px;
-  color: #00ffb4;
 }
 
 .sw-icon img {
   width: 22px;
   height: 22px;
-  filter: brightness(0) saturate(100%) invert(87%) sepia(40%) saturate(500%) hue-rotate(100deg);
+  filter: drop-shadow(0 0 1px rgba(200,220,220,0.6));
 }
 
 .sw-years {
