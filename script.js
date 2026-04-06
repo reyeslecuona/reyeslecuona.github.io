@@ -50,7 +50,7 @@ const cats = [
   ]},
   { title:'// Producción', items:[
     { icon: si('miro'), start:2025, d:false },
-    { icon: si('slack'), start:2024, d:true },
+     { icon: li('slack.png'), start:2018, d:true },
     { icon: si('jira'), start:2023, d:false },
     { icon: si('clickup'), start:2025, d:true },
   ]},
