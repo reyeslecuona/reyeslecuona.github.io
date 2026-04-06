@@ -31,8 +31,8 @@ const cats = [
     { icon: `<img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Canva_icon_2021.svg" width="30" height="30">`, start:2021, d:true },
     { icon: di('figma-plain'), start:2023, d:true },
     { icon: si('notion'), start:2022, d:true },
-    { icon: `<img src="imagenes/pureref.png" width="30" height="30">`, start:2024, d:false },
-    { icon: `<img src="imagenes/3dsmax.png" width="30" height="30">`, start:2022, d:false },
+    { icon: `<img src="ícosns/pureref.png" width="30" height="30">`, start:2024, d:false },
+    { icon: `<img src="icons/3dmax.png" width="30" height="30">`, start:2022, d:false },
   ]},
    { title:'// Microsoft', items:[
     { icon: `<img src="https://iconos8.es/icons/set/microsoft-word.svg.png" width="30" height="30">`, start:2017, d:true },
