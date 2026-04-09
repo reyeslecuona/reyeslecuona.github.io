@@ -50,7 +50,7 @@ const cats = [
   ]},
   { title:'// Producción', items:[
     { icon: si('miro'), start:2025, d:false },
-     { icon: li('slack.png'), start:2018, d:true },
+    { icon: li('slack.png'), start:2018, d:true },
     { icon: si('jira'), start:2023, d:false },
     { icon: si('clickup'), start:2025, d:true },
   ]},
@@ -67,4 +67,14 @@ cats.forEach(cat => {
         <span class="sw-years">${y(p.start)}</span>
       </div>`).join('');
   grid.appendChild(div);
+});
+
+// Estela del cursor
+document.addEventListener('mousemove', (e) => {
+  const trail = document.createElement('div');
+  trail.className = 'cursor-trail';
+  trail.style.left = e.clientX + 'px';
+  trail.style.top = e.clientY + 'px';
+  document.body.appendChild(trail);
+  setTimeout(() => trail.remove(), 400);
 });
