@@ -72,12 +72,42 @@ cats.forEach(cat => {
   grid.appendChild(div);
 });
 
-// Estela del cursor
-document.addEventListener('mousemove', (e) => {
-  const trail = document.createElement('div');
-  trail.className = 'cursor-trail';
-  trail.style.left = e.clientX + 'px';
-  trail.style.top = e.clientY + 'px';
-  document.body.appendChild(trail);
-  setTimeout(() => trail.remove(), 400);
+// Estela del cursor en línea
+const canvas = document.createElement('canvas');
+canvas.style.cssText = 'position:fixed;top:0;left:0;pointer-events:none;z-index:9999;';
+document.body.appendChild(canvas);
+const ctx = canvas.getContext('2d');
+
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+window.addEventListener('resize', () => {
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
 });
+
+const points = [];
+const MAX_POINTS = 20;
+
+document.addEventListener('mousemove', (e) => {
+  points.push({ x: e.clientX, y: e.clientY, age: 0 });
+  if (points.length > MAX_POINTS) points.shift();
+});
+
+function drawTrail() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+  for (let i = 1; i < points.length; i++) {
+    const t = i / points.length;
+    ctx.beginPath();
+    ctx.moveTo(points[i - 1].x, points[i - 1].y);
+    ctx.lineTo(points[i].x, points[i].y);
+    ctx.strokeStyle = `rgba(255, 0, 170, ${t * 0.8})`;
+    ctx.lineWidth = t * 3;
+    ctx.lineCap = 'round';
+    ctx.stroke();
+  }
+
+  requestAnimationFrame(drawTrail);
+}
+
+drawTrail();
