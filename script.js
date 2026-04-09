@@ -1,5 +1,8 @@
 const year = new Date().getFullYear();
-const y = s => Math.max(1, year - s) + ' años';
+const y = s => {
+  const n = Math.max(1, year - s);
+  return n === 1 ? '1 año' : n + ' años';
+};
 const di = name => `<i class="devicon-${name}"></i>`;
 const si = name => `<img src="https://cdn.simpleicons.org/${name}" width="30" height="30">`;
 const li = name => `<img src="icons/${name}" width="30" height="30" class="icon-local">`;
