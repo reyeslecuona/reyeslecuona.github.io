@@ -87,24 +87,32 @@ window.addEventListener('resize', () => {
 
 const points = [];
 const MAX_POINTS = 20;
+let lastMove = 0;
 
 document.addEventListener('mousemove', (e) => {
-  points.push({ x: e.clientX, y: e.clientY, age: 0 });
+  points.push({ x: e.clientX, y: e.clientY });
   if (points.length > MAX_POINTS) points.shift();
+  lastMove = Date.now();
 });
 
 function drawTrail() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-  for (let i = 1; i < points.length; i++) {
-    const t = i / points.length;
-    ctx.beginPath();
-    ctx.moveTo(points[i - 1].x, points[i - 1].y);
-    ctx.lineTo(points[i].x, points[i].y);
-    ctx.strokeStyle = `rgba(255, 0, 170, ${t * 0.8})`;
-    ctx.lineWidth = t * 3;
-    ctx.lineCap = 'round';
-    ctx.stroke();
+  const elapsed = Date.now() - lastMove;
+
+  if (elapsed < 300 && points.length > 1) {
+    const fade = Math.max(0, 1 - elapsed / 300);
+
+    for (let i = 1; i < points.length; i++) {
+      const t = i / points.length;
+      ctx.beginPath();
+      ctx.moveTo(points[i - 1].x, points[i - 1].y);
+      ctx.lineTo(points[i].x, points[i].y);
+      ctx.strokeStyle = `rgba(255, 0, 170, ${t * 0.8 * fade})`;
+      ctx.lineWidth = t * 3;
+      ctx.lineCap = 'round';
+      ctx.stroke();
+    }
   }
 
   requestAnimationFrame(drawTrail);
