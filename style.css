@@ -524,6 +524,110 @@ body::after {
   color:rgba(0,255,180,0.8);
 }
 
+.contacto-section {
+  padding: 60px 32px;
+  position: relative;
+  z-index: 5;
+}
+
+.contacto-header {
+  margin-bottom: 40px;
+}
+
+.contacto-wrap {
+  display: flex;
+  gap: 80px;
+  align-items: center;
+}
+
+.contacto-gancho {
+  flex: 1;
+}
+
+.contacto-frase {
+  font-size: 36px;
+  font-weight: 900;
+  color: #00ffb4;
+  text-shadow: 0 0 20px #00ffb4;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.contacto-sub {
+  font-family: 'VT323', monospace;
+  font-size: 20px;
+  color: rgba(0,255,180,0.6);
+  letter-spacing: 2px;
+  line-height: 1.6;
+}
+
+.contacto-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.contacto-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: rgba(0,255,180,0.7);
+  text-decoration: none;
+  font-size: 11px;
+  letter-spacing: 2px;
+  transition: color 0.2s;
+}
+
+.contacto-item:hover { color: #00ffb4; }
+
+.contacto-icon {
+  font-size: 18px;
+  color: #ff00aa;
+}
+
+.contacto-rrss {
+  display: flex;
+  gap: 16px;
+  margin-top: 8px;
+}
+
+.rrss-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border: 1px solid rgba(0,255,180,0.3);
+  position: relative;
+  transition: border-color 0.2s;
+}
+
+.rrss-btn:hover {
+  border-color: #00ffb4;
+  box-shadow: 0 0 10px rgba(0,255,180,0.3);
+}
+
+.rrss-btn::before {
+  content: '';
+  position: absolute;
+  top: -1px; left: -1px;
+  width: 8px; height: 8px;
+  border-top: 1px solid #00ffb4;
+  border-left: 1px solid #00ffb4;
+}
+
+.rrss-btn::after {
+  content: '';
+  position: absolute;
+  bottom: -1px; right: -1px;
+  width: 8px; height: 8px;
+  border-bottom: 1px solid #ff00aa;
+  border-right: 1px solid #ff00aa;
+}
+
+
 @media (max-width: 767px) {
   .rpo-hero {
     flex-direction:column;
@@ -543,4 +647,8 @@ body::after {
   .sw-grid { grid-template-columns:repeat(2,1fr); }
   .sw-subsection { margin-top:40px; padding-top:24px; }
   .rpo-cards { grid-template-columns:repeat(2,1fr); padding:16px 20px; }
+
+    .contacto-section { padding: 40px 20px; }
+  .contacto-wrap { flex-direction: column; gap: 40px; }
+  .contacto-frase { font-size: 24px; }
 }
