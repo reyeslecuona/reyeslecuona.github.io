@@ -49,9 +49,8 @@ body::after {
   border-bottom:1px solid rgba(0,255,180,0.2);
   position:sticky;
   top:0;
-  z-index:5;
-  background:rgba(0,0,0,0.85);
-  backdrop-filter:blur(8px);
+  z-index:100;
+  background:#000;
 }
 
 .rpo-logo {
