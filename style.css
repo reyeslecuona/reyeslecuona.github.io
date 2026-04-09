@@ -228,12 +228,13 @@ body::after {
 
 .rpo-cards {
   display:grid;
-  grid-template-columns:repeat(3,1fr);
+  grid-template-columns:repeat(4,1fr);
   gap:12px;
   padding:24px 32px;
   position:relative;
   z-index:5;
 }
+
 
 .rpo-card {
   border:1px solid rgba(0,255,180,0.15);
@@ -522,4 +523,5 @@ body::after {
   .solo-pc { display:none; }
   .sw-grid { grid-template-columns:repeat(2,1fr); }
   .sw-subsection { margin-top:40px; padding-top:24px; }
+  .rpo-cards { grid-template-columns:repeat(2,1fr); padding:16px 20px; }
 }
