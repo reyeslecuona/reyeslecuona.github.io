@@ -342,11 +342,12 @@ body::after {
 .skills-group-title {
   font-size:9px;
   letter-spacing:4px;
-  color:rgba(0,255,180,0.5);
+  color:#ff00aa;
+  text-shadow:0 0 8px #ff00aa;
   text-transform:uppercase;
   margin-bottom:12px;
   padding-bottom:8px;
-  border-bottom:1px solid rgba(0,255,180,0.15);
+  border-bottom:1px solid rgba(255,0,170,0.15);
 }
 
 .skill-item {
