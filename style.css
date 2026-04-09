@@ -8,6 +8,7 @@ body {
   font-family:'Orbitron',sans-serif;
   overflow-x:hidden;
   position:relative;
+   cursor: url('cursor.svg') 4 2, auto;
 }
 
 body::before {
