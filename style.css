@@ -271,10 +271,10 @@ body::after {
 }
 
 .rpo-card-label {
-  font-size:9px;
+  font-size:10px;
   letter-spacing:2px;
   color:rgba(0,255,180,0.5);
-  margin-top:4px;
+  margin-top:6px;
   text-align:center;
 }
 
