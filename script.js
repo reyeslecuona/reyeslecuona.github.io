@@ -73,6 +73,7 @@ cats.forEach(cat => {
 });
 
 // Estela del cursor en línea
+/*
 const canvas = document.createElement('canvas');
 canvas.style.cssText = 'position:fixed;top:0;left:0;pointer-events:none;z-index:9999;';
 document.body.appendChild(canvas);
@@ -119,3 +120,6 @@ function drawTrail() {
 }
 
 drawTrail();
+*/
+
+
