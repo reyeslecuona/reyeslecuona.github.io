@@ -11,6 +11,16 @@ body {
   cursor: url('cursor.svg') 4 2, auto;
 }
 
+/* Cursor de mira — elementos clickables */
+a, button, .rpo-btn, .rrss-btn {
+  cursor: url('cursor-click.svg') 16 16, pointer;
+}
+
+/* Cursor de texto — skill items al hover */
+.skill-item, .sw-program {
+  cursor: url('cursor-hover.svg') 4 2, default;
+}
+
 body::before {
   content:'';
   position:fixed;
