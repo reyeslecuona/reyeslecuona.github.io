@@ -16,13 +16,7 @@ const cubos = lv => {
 };
 
 const cats = [
-  { title:'// Google', items:[
-    { icon: si('googleforms'), start:2023, lv:4 },
-    { icon: si('googlesheets'), start:2021, lv:4 },
-    { icon: si('googledrive'), start:2019, lv:4 },
-    { icon: si('googledocs'), start:2019, lv:4 },
-    { icon: si('googleslides'), start:2020, lv:4 },
-  ]},
+ 
   { title:'// Código', items:[
     { icon: di('html5-plain'), start:2023, lv:4 },
     { icon: di('css3-plain'), start:2023, lv:4 },
@@ -35,15 +29,22 @@ const cats = [
     { icon: si('construct3'), start:2020, lv:4 },
     { icon: si('gamemaker'), start:2022, lv:2 },
     { icon: di('unity-plain'), start:2021, lv:4 },
-    { icon: di('unrealengine-plain'), start:2023, lv:2 },
+    { icon: di('unrealengine-plain'), start:2023, lv:3 },
     { icon: si('playcanvas'), start:2025, lv:1 },
+  ]},
+   { title:'// Google', items:[
+    { icon: si('googleforms'), start:2023, lv:4 },
+    { icon: si('googlesheets'), start:2021, lv:4 },
+    { icon: si('googledrive'), start:2019, lv:4 },
+    { icon: si('googledocs'), start:2019, lv:4 },
+    { icon: si('googleslides'), start:2020, lv:4 },
   ]},
   { title:'// Diseño', items:[
     { icon: li('canva.png'), start:2021, lv:4 },
     { icon: di('figma-plain'), start:2023, lv:4 },
     { icon: si('notion'), start:2022, lv:4 },
     { icon: li('pureref.png'), start:2024, lv:2 },
-    { icon: li('3dmax.png'), start:2022, lv:2 },
+    { icon: li('3dmax.png'), start:2022, lv:1 },
   ]},
   { title:'// Microsoft', items:[
     { icon: li('word.png'), start:2017, lv:4 },
@@ -51,19 +52,19 @@ const cats = [
     { icon: li('powerpoint.png'), start:2018, lv:4 },
   ]},
   { title:'// Adobe', items:[
-    { icon: di('photoshop-plain'), start:2022, lv:2 },
-    { icon: di('illustrator-plain'), start:2021, lv:3 },
+    { icon: di('photoshop-plain'), start:2022, lv:1 },
+    { icon: di('illustrator-plain'), start:2021, lv:2 },
     { icon: di('premierepro-plain'), start:2022, lv:3 },
   ]},
   { title:'// Repositorios', items:[
     { icon: di('github-original'), start:2021, lv:3 },
-    { icon: si('sourcetree'), start:2024, lv:2 },
+    { icon: si('sourcetree'), start:2024, lv:1 },
   ]},
   { title:'// Producción', items:[
-    { icon: si('miro'), start:2025, lv:1 },
+    { icon: si('miro'), start:2025, lv:2 },
     { icon: li('slack.png'), start:2018, lv:3 },
     { icon: si('jira'), start:2023, lv:2 },
-    { icon: si('clickup'), start:2025, lv:2 },
+    { icon: si('clickup'), start:2025, lv:3 },
   ]},
 ];
 
