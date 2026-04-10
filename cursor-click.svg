@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+  <defs>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="1.5" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <!-- Rombo exterior rosa -->
+  <polygon points="16,2 30,16 16,30 2,16" fill="none" stroke="#ff00aa" stroke-width="1.5" stroke-linejoin="round" filter="url(#glow)"/>
+  <!-- Rombo interior verde -->
+  <polygon points="16,8 24,16 16,24 8,16" fill="none" stroke="#00ffb4" stroke-width="1" stroke-linejoin="round" filter="url(#glow)"/>
+  <!-- Punto central verde -->
+  <circle cx="16" cy="16" r="2" fill="#00ffb4" filter="url(#glow)"/>
+  <!-- Ticks en los vértices en rosa -->
+  <line x1="16" y1="0" x2="16" y2="3" stroke="#ff00aa" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="32" y1="16" x2="29" y2="16" stroke="#ff00aa" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="16" y1="32" x2="16" y2="29" stroke="#ff00aa" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="0" y1="16" x2="3" y2="16" stroke="#ff00aa" stroke-width="1.5" stroke-linecap="round"/>
+</svg>
