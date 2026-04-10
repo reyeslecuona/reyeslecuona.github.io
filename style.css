@@ -413,28 +413,28 @@ body::after {
 .skill-item:hover::before { width:100%; }
 .skill-item:hover::after  { width:100%; }
 
-.line-left {
+.skill-item .line-left {
   position:absolute; left:0; top:0;
   width:1px; height:0;
   background:linear-gradient(to bottom, #00ffb4 12px, rgba(0,255,180,0.2) 12px);
   transition:height 0.3s ease 0.3s;
 }
 
-.line-right {
+.skill-item .line-right {
   position:absolute; right:0; bottom:0;
   width:1px; height:0;
   background:linear-gradient(to top, #ff00aa 12px, rgba(0,255,180,0.2) 12px);
   transition:height 0.3s ease 0.4s;
 }
 
-.line-top-right {
+.skill-item .line-top-right {
   position:absolute; right:0; top:0;
   width:1px; height:0;
   background:rgba(0,255,180,0.2);
   transition:height 0.3s ease 0.3s;
 }
 
-.line-bot-left {
+.skill-item .line-bot-left {
   position:absolute; left:0; bottom:0;
   width:1px; height:0;
   background:rgba(0,255,180,0.2);
@@ -487,6 +487,8 @@ body::after {
 }
 
 .solo-pc { display:block; }
+
+/*Programas*/
 
 .sw-subsection {
   margin-top:60px;
