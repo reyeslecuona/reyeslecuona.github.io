@@ -7,55 +7,63 @@ const di = name => `<i class="devicon-${name}"></i>`;
 const si = name => `<img src="https://cdn.simpleicons.org/${name}" width="30" height="30">`;
 const li = name => `<img src="icons/${name}" width="30" height="30" class="icon-local">`;
 
+const cubos = lv => {
+  let html = '<div class="cubos">';
+  for (let i = 1; i <= 4; i++) {
+    html += `<div class="cubo ${i <= lv ? 'lleno' : 'vacio'}"></div>`;
+  }
+  return html + '</div>';
+};
+
 const cats = [
   { title:'// Google', items:[
-    { icon: si('googleforms'), start:2023, d:true },
-    { icon: si('googlesheets'), start:2021, d:true },
-    { icon: si('googledrive'), start:2019, d:true },
-    { icon: si('googledocs'), start:2019, d:true },
-    { icon: si('googleslides'), start:2020, d:true },
+    { icon: si('googleforms'), start:2023, lv:4 },
+    { icon: si('googlesheets'), start:2021, lv:4 },
+    { icon: si('googledrive'), start:2019, lv:4 },
+    { icon: si('googledocs'), start:2019, lv:4 },
+    { icon: si('googleslides'), start:2020, lv:4 },
   ]},
   { title:'// Código', items:[
-    { icon: di('html5-plain'), start:2023, d:true },
-    { icon: di('css3-plain'), start:2023, d:true },
-    { icon: di('javascript-plain'), start:2023, d:true },
-    { icon: di('csharp-plain'), start:2021, d:true },
-    { icon: di('cplusplus-plain'), start:2022, d:false },
-    { icon: di('python-plain'), start:2025, d:false },
+    { icon: di('html5-plain'), start:2023, lv:4 },
+    { icon: di('css3-plain'), start:2023, lv:4 },
+    { icon: di('javascript-plain'), start:2023, lv:3 },
+    { icon: di('csharp-plain'), start:2021, lv:4 },
+    { icon: di('cplusplus-plain'), start:2022, lv:2 },
+    { icon: di('python-plain'), start:2025, lv:1 },
   ]},
   { title:'// Motores', items:[
-    { icon: si('construct3'), start:2020, d:true },
-    { icon: si('gamemaker'), start:2022, d:false },
-    { icon: di('unity-plain'), start:2021, d:true },
-    { icon: di('unrealengine-plain'), start:2023, d:false },
-    { icon: si('playcanvas'), start:2025, d:false },
+    { icon: si('construct3'), start:2020, lv:4 },
+    { icon: si('gamemaker'), start:2022, lv:2 },
+    { icon: di('unity-plain'), start:2021, lv:4 },
+    { icon: di('unrealengine-plain'), start:2023, lv:2 },
+    { icon: si('playcanvas'), start:2025, lv:1 },
   ]},
   { title:'// Diseño', items:[
-    { icon: li('canva.png'), start:2021, d:true },
-    { icon: di('figma-plain'), start:2023, d:true },
-    { icon: si('notion'), start:2022, d:true },
-    { icon: li('pureref.png'), start:2024, d:false },
-    { icon: li('3dmax.png'), start:2022, d:false },
+    { icon: li('canva.png'), start:2021, lv:4 },
+    { icon: di('figma-plain'), start:2023, lv:4 },
+    { icon: si('notion'), start:2022, lv:4 },
+    { icon: li('pureref.png'), start:2024, lv:2 },
+    { icon: li('3dmax.png'), start:2022, lv:2 },
   ]},
   { title:'// Microsoft', items:[
-    { icon: li('word.png'), start:2017, d:true },
-    { icon: li('excel.png'), start:2019, d:true },
-    { icon: li('powerpoint.png'), start:2018, d:true },
+    { icon: li('word.png'), start:2017, lv:4 },
+    { icon: li('excel.png'), start:2019, lv:4 },
+    { icon: li('powerpoint.png'), start:2018, lv:4 },
   ]},
   { title:'// Adobe', items:[
-    { icon: di('photoshop-plain'), start:2022, d:false },
-    { icon: di('illustrator-plain'), start:2021, d:true },
-    { icon: di('premierepro-plain'), start:2022, d:true },
+    { icon: di('photoshop-plain'), start:2022, lv:2 },
+    { icon: di('illustrator-plain'), start:2021, lv:3 },
+    { icon: di('premierepro-plain'), start:2022, lv:3 },
   ]},
   { title:'// Repositorios', items:[
-    { icon: di('github-original'), start:2021, d:false },
-    { icon: si('sourcetree'), start:2024, d:false },
+    { icon: di('github-original'), start:2021, lv:3 },
+    { icon: si('sourcetree'), start:2024, lv:2 },
   ]},
   { title:'// Producción', items:[
-    { icon: si('miro'), start:2025, d:false },
-    { icon: li('slack.png'), start:2018, d:true },
-    { icon: si('jira'), start:2023, d:false },
-    { icon: si('clickup'), start:2025, d:true },
+    { icon: si('miro'), start:2025, lv:1 },
+    { icon: li('slack.png'), start:2018, lv:3 },
+    { icon: si('jira'), start:2023, lv:2 },
+    { icon: si('clickup'), start:2025, lv:2 },
   ]},
 ];
 
@@ -65,9 +73,10 @@ cats.forEach(cat => {
   div.className = 'sw-category';
   div.innerHTML = `<div class="sw-cat-title">${cat.title}</div>` +
     cat.items.map(p => `
-      <div class="sw-program${p.d?' destacado':''}">
+      <div class="sw-program">
         <div class="sw-icon">${p.icon}</div>
         <span class="sw-years">${y(p.start)}</span>
+        ${cubos(p.lv)}
       </div>`).join('');
   grid.appendChild(div);
 });
