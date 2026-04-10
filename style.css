@@ -496,6 +496,31 @@ body::after {
   margin-bottom:3px;
   border:1px solid transparent;
   position:relative;
+  transition:background 0.2s, border-color 0.2s;
+  cursor:default;
+}
+
+.sw-program:hover {
+  background:rgba(0,255,180,0.04);
+  border:1px solid rgba(0,255,180,0.3);
+}
+
+.sw-program:hover::before {
+  content:'';
+  position:absolute;
+  top:-1px; left:-1px;
+  width:6px; height:6px;
+  border-top:1px solid #00ffb4;
+  border-left:1px solid #00ffb4;
+}
+
+.sw-program:hover::after {
+  content:'';
+  position:absolute;
+  bottom:-1px; right:-1px;
+  width:6px; height:6px;
+  border-bottom:1px solid #ff00aa;
+  border-right:1px solid #ff00aa;
 }
 
 .sw-program.destacado {
