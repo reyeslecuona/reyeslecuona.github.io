@@ -307,6 +307,8 @@ body::after {
   margin-top:60px;
 }
 
+/*Skills*/
+
 .skills-section {
   padding:60px 32px;
   position:relative;
@@ -371,6 +373,9 @@ body::after {
 }
 
 .skill-item {
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
   font-size:11px;
   letter-spacing:2px;
   color:rgba(0,255,180,0.5);
@@ -378,16 +383,17 @@ body::after {
   margin-bottom:6px;
   text-transform:uppercase;
   border:1px solid transparent;
-}
-
-.skill-item.destacado {
-  color:#00ffb4;
-  border:1px solid rgba(0,255,180,0.4);
   position:relative;
-  background:rgba(0,255,180,0.04);
+  transition:background 0.2s, border-color 0.2s;
+  cursor:default;
 }
 
-.skill-item.destacado::before {
+.skill-item:hover {
+  background:rgba(0,255,180,0.04);
+  border:1px solid rgba(0,255,180,0.3);
+}
+
+.skill-item:hover::before {
   content:'';
   position:absolute;
   top:-1px; left:-1px;
@@ -396,13 +402,35 @@ body::after {
   border-left:1px solid #00ffb4;
 }
 
-.skill-item.destacado::after {
+.skill-item:hover::after {
   content:'';
   position:absolute;
   bottom:-1px; right:-1px;
   width:8px; height:8px;
   border-bottom:1px solid #ff00aa;
   border-right:1px solid #ff00aa;
+}
+
+.cubos {
+  display:flex;
+  gap:3px;
+  flex-shrink:0;
+}
+
+.cubo {
+  width:10px;
+  height:10px;
+  border:1px solid rgba(0,255,180,0.4);
+}
+
+.cubo.lleno {
+  background:#00ffb4;
+  box-shadow:0 0 4px #00ffb4;
+  border-color:#00ffb4;
+}
+
+.cubo.vacio {
+  background:transparent;
 }
 
 .skills-img-wrap {
@@ -523,6 +551,7 @@ body::after {
 .sw-program.destacado .sw-years {
   color:rgba(0,255,180,0.8);
 }
+/*Contacto*/
 
 .contacto-section {
   padding: 60px 32px;
