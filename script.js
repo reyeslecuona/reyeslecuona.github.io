@@ -16,7 +16,6 @@ const cubos = lv => {
 };
 
 const cats = [
- 
   { title:'// Código', items:[
     { icon: di('html5-plain'), start:2023, lv:4 },
     { icon: di('css3-plain'), start:2023, lv:4 },
@@ -32,7 +31,7 @@ const cats = [
     { icon: di('unrealengine-plain'), start:2023, lv:3 },
     { icon: si('playcanvas'), start:2025, lv:1 },
   ]},
-   { title:'// Google', items:[
+  { title:'// Google', items:[
     { icon: si('googleforms'), start:2023, lv:4 },
     { icon: si('googlesheets'), start:2021, lv:4 },
     { icon: si('googledrive'), start:2019, lv:4 },
@@ -75,6 +74,10 @@ cats.forEach(cat => {
   div.innerHTML = `<div class="sw-cat-title">${cat.title}</div>` +
     cat.items.map(p => `
       <div class="sw-program">
+        <span class="line-left"></span>
+        <span class="line-right"></span>
+        <span class="line-top-right"></span>
+        <span class="line-bot-left"></span>
         <div class="sw-icon">${p.icon}</div>
         <span class="sw-years">${y(p.start)}</span>
         ${cubos(p.lv)}
