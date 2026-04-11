@@ -138,7 +138,7 @@ drawTrail();
 
 // Proyectos
 const proyectos = [
-  { id:0, src:'imagenes/proyecto1.jpg', titulo:'Fabrica en UE', tag:'Unreal Engine', desc:'Fabrica hecha en UE para probar cinemáticas, partículas y diseño de niveles.', link:'https://youtu.be/hOsRPem3IS4', btnText:'Ver vídeo' },
+  { id:0, src:'https://img.youtube.com/vi/hOsRPem3IS4/mqdefault.jpg', titulo:'Fabrica en UE', tag:'Unreal Engine', desc:'Fabrica hecha en UE para probar cinemáticas, partículas y diseño de niveles.', link:null, btnText:null, video:'hOsRPem3IS4' },
   { id:1, src:'imagenes/proyecto1.jpg', titulo:'Proyecto 2', tag:'Unity', desc:'Descripción del proyecto 2.', link:null, btnText:null },
   { id:2, src:'imagenes/proyecto1.jpg', titulo:'Proyecto 3', tag:'Game Jam', desc:'Descripción del proyecto 3.', link:null, btnText:null },
   { id:3, src:'imagenes/proyecto1.jpg', titulo:'Proyecto 4', tag:'Diseño', desc:'Descripción del proyecto 4.', link:null, btnText:null },
@@ -163,8 +163,11 @@ function renderProyectos() {
     const item = document.createElement('div');
     item.className = 'proj-item' + (isActive ? ' expanded' : '');
     item.innerHTML = `
-      <img src="${p.src}" alt="${p.titulo}" />
-      <div class="overlay"><div class="overlay-icon">+</div></div>
+      ${isActive && p.video
+        ? `<iframe src="https://www.youtube.com/embed/${p.video}?autoplay=1" frameborder="0" allow="autoplay; fullscreen" allowfullscreen style="width:100%;height:100%;position:absolute;top:0;left:0;"></iframe>`
+        : `<img src="${p.src}" alt="${p.titulo}" />`
+      }
+      ${!isActive ? '<div class="overlay"><div class="overlay-icon">+</div></div>' : ''}
     `;
     item.addEventListener('click', () => {
       activeProyecto = activeProyecto === p.id ? null : p.id;
@@ -212,6 +215,4 @@ function renderProyectos() {
     }, 50);
   }
 }
-
 renderProyectos();
-
