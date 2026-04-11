@@ -139,7 +139,7 @@ drawTrail();
 // Proyectos
 const proyectos = [
   { id:0, src:'https://img.youtube.com/vi/hOsRPem3IS4/mqdefault.jpg', titulo:'Fabrica en UE', tag:'Unreal Engine', desc:'Fabrica hecha en UE para probar cinemáticas, partículas y diseño de niveles. Este proyecto fue una practica personal para tener un mejor dominio del motor, saber colocar objetos algo mas complicados y poder probar las cinematicas usando key-frames', link:null, btnText:null, video:'hOsRPem3IS4' },
-  { id:1, src:'https://img.youtube.com/vi/0jvF_cyfhf0/mqdefault.jpg', titulo:'Video Recopilación', tag:'Recopliación', desc:'Recopilación de proyectos de JAMs, cortos y pequeños proyectos creados antes del 2024.', link:null, btnText:null },
+  { id:1, src:'https://img.youtube.com/vi/0jvF_cyfhf0/mqdefault.jpg', titulo:'Video Recopilación', tag:'Recopilación', desc:'Recopilación de proyectos de JAMs, cortos y pequeños proyectos creados antes del 2024.', link:null, btnText:null, video:'0jvF_cyfhf0' },
   { id:2, src:'imagenes/proyecto1.jpg', titulo:'Proyecto 3', tag:'Game Jam', desc:'Descripción del proyecto 3.', link:null, btnText:null },
   { id:3, src:'imagenes/proyecto1.jpg', titulo:'Proyecto 4', tag:'Diseño', desc:'Descripción del proyecto 4.', link:null, btnText:null },
   { id:4, src:'imagenes/proyecto1.jpg', titulo:'Proyecto 5', tag:'Puzzle', desc:'Descripción del proyecto 5.', link:null, btnText:null },
