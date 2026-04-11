@@ -136,3 +136,82 @@ drawTrail();
 */
 
 
+// Proyectos
+const proyectos = [
+  { id:0, src:'imagenes/proyecto1.jpg', titulo:'Fabrica en UE', desc:'Fabrica hecha en UE para probar cinemáticas, partículas y diseño de niveles.', link:'https://youtu.be/hOsRPem3IS4' },
+  { id:1, src:'imagenes/proyecto1.jpg', titulo:'Proyecto 2', desc:'Descripción del proyecto 2.', link:null },
+  { id:2, src:'imagenes/proyecto1.jpg', titulo:'Proyecto 3', desc:'Descripción del proyecto 3.', link:null },
+  { id:3, src:'imagenes/proyecto1.jpg', titulo:'Proyecto 4', desc:'Descripción del proyecto 4.', link:null },
+  { id:4, src:'imagenes/proyecto1.jpg', titulo:'Proyecto 5', desc:'Descripción del proyecto 5.', link:null },
+  { id:5, src:'imagenes/proyecto1.jpg', titulo:'Proyecto 6', desc:'Descripción del proyecto 6.', link:null },
+  { id:6, src:'imagenes/proyecto1.jpg', titulo:'Proyecto 7', desc:'Descripción del proyecto 7.', link:null },
+  { id:7, src:'imagenes/proyecto1.jpg', titulo:'Proyecto 8', desc:'Descripción del proyecto 8.', link:null },
+  { id:8, src:'imagenes/proyecto1.jpg', titulo:'Proyecto 9', desc:'Descripción del proyecto 9.', link:null },
+  { id:9, src:'imagenes/proyecto1.jpg', titulo:'Proyecto 10', desc:'Descripción del proyecto 10.', link:null },
+];
+
+let activeProyecto = null;
+const projGrid = document.getElementById('proj-grid');
+
+function renderProyectos() {
+  projGrid.innerHTML = '';
+  proyectos.forEach((p) => {
+    const col = proyectos.indexOf(p) % 5;
+    const isActive = activeProyecto === p.id;
+    const isRight = col >= 3;
+
+    const item = document.createElement('div');
+    item.className = 'proj-item' + (isActive ? ' expanded' : '');
+    item.innerHTML = `
+      <img src="${p.src}" alt="${p.titulo}" />
+      <div class="overlay"><div class="overlay-icon">+</div></div>
+    `;
+    item.addEventListener('click', () => {
+      activeProyecto = activeProyecto === p.id ? null : p.id;
+      renderProyectos();
+      if (activeProyecto !== null) {
+        setTimeout(() => {
+          const info = document.querySelector('.proj-info');
+          if (info) info.classList.add('visible');
+        }, 50);
+      }
+    });
+
+    const info = document.createElement('div');
+    info.className = 'proj-info';
+    info.innerHTML = `
+      <button class="proj-close">X</button>
+      <div class="proj-tag">[ PROYECTO ]</div>
+      <div class="proj-name">${p.titulo}</div>
+      <div class="proj-desc">${p.desc}</div>
+      ${p.link ? `<div class="proj-btn-wrap"><a href="${p.link}" target="_blank" class="proj-btn">Ver proyecto</a></div>` : '<div class="proj-btn-wrap"></div>'}
+    `;
+
+    if (isActive && isRight) {
+      projGrid.appendChild(info);
+      projGrid.appendChild(item);
+    } else {
+      projGrid.appendChild(item);
+      if (isActive) projGrid.appendChild(info);
+    }
+  });
+
+  const closeBtn = document.querySelector('.proj-close');
+  if (closeBtn) {
+    closeBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      activeProyecto = null;
+      renderProyectos();
+    });
+  }
+
+  if (activeProyecto !== null) {
+    setTimeout(() => {
+      const info = document.querySelector('.proj-info');
+      if (info) info.classList.add('visible');
+    }, 50);
+  }
+}
+
+renderProyectos();
+
