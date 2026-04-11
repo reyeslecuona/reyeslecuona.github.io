@@ -138,16 +138,16 @@ drawTrail();
 
 // Proyectos
 const proyectos = [
-  { id:0, src:'imagenes/proyecto1.jpg', titulo:'Fabrica en UE', desc:'Fabrica hecha en UE para probar cinemáticas, partículas y diseño de niveles.', link:'https://youtu.be/hOsRPem3IS4' },
-  { id:1, src:'imagenes/proyecto1.jpg', titulo:'Proyecto 2', desc:'Descripción del proyecto 2.', link:null },
-  { id:2, src:'imagenes/proyecto1.jpg', titulo:'Proyecto 3', desc:'Descripción del proyecto 3.', link:null },
-  { id:3, src:'imagenes/proyecto1.jpg', titulo:'Proyecto 4', desc:'Descripción del proyecto 4.', link:null },
-  { id:4, src:'imagenes/proyecto1.jpg', titulo:'Proyecto 5', desc:'Descripción del proyecto 5.', link:null },
-  { id:5, src:'imagenes/proyecto1.jpg', titulo:'Proyecto 6', desc:'Descripción del proyecto 6.', link:null },
-  { id:6, src:'imagenes/proyecto1.jpg', titulo:'Proyecto 7', desc:'Descripción del proyecto 7.', link:null },
-  { id:7, src:'imagenes/proyecto1.jpg', titulo:'Proyecto 8', desc:'Descripción del proyecto 8.', link:null },
-  { id:8, src:'imagenes/proyecto1.jpg', titulo:'Proyecto 9', desc:'Descripción del proyecto 9.', link:null },
-  { id:9, src:'imagenes/proyecto1.jpg', titulo:'Proyecto 10', desc:'Descripción del proyecto 10.', link:null },
+  { id:0, src:'imagenes/proyecto1.jpg', titulo:'Fabrica en UE', tag:'Unreal Engine', desc:'Fabrica hecha en UE para probar cinemáticas, partículas y diseño de niveles.', link:'https://youtu.be/hOsRPem3IS4', btnText:'Ver vídeo' },
+  { id:1, src:'imagenes/proyecto1.jpg', titulo:'Proyecto 2', tag:'Unity', desc:'Descripción del proyecto 2.', link:null, btnText:null },
+  { id:2, src:'imagenes/proyecto1.jpg', titulo:'Proyecto 3', tag:'Game Jam', desc:'Descripción del proyecto 3.', link:null, btnText:null },
+  { id:3, src:'imagenes/proyecto1.jpg', titulo:'Proyecto 4', tag:'Diseño', desc:'Descripción del proyecto 4.', link:null, btnText:null },
+  { id:4, src:'imagenes/proyecto1.jpg', titulo:'Proyecto 5', tag:'Puzzle', desc:'Descripción del proyecto 5.', link:null, btnText:null },
+  { id:5, src:'imagenes/proyecto1.jpg', titulo:'Proyecto 6', tag:'Jam', desc:'Descripción del proyecto 6.', link:null, btnText:null },
+  { id:6, src:'imagenes/proyecto1.jpg', titulo:'Proyecto 7', tag:'Construct', desc:'Descripción del proyecto 7.', link:null, btnText:null },
+  { id:7, src:'imagenes/proyecto1.jpg', titulo:'Proyecto 8', tag:'Unity', desc:'Descripción del proyecto 8.', link:null, btnText:null },
+  { id:8, src:'imagenes/proyecto1.jpg', titulo:'Proyecto 9', tag:'Game Maker', desc:'Descripción del proyecto 9.', link:null, btnText:null },
+  { id:9, src:'imagenes/proyecto1.jpg', titulo:'Proyecto 10', tag:'Diseño de mesa', desc:'Descripción del proyecto 10.', link:null, btnText:null },
 ];
 
 let activeProyecto = null;
@@ -181,10 +181,10 @@ function renderProyectos() {
     info.className = 'proj-info';
     info.innerHTML = `
       <button class="proj-close">X</button>
-      <div class="proj-tag">[ PROYECTO ]</div>
+      <div class="proj-tag">[ ${p.tag} ]</div>
       <div class="proj-name">${p.titulo}</div>
       <div class="proj-desc">${p.desc}</div>
-      ${p.link ? `<div class="proj-btn-wrap"><a href="${p.link}" target="_blank" class="proj-btn">Ver proyecto</a></div>` : '<div class="proj-btn-wrap"></div>'}
+      ${p.link && p.btnText ? `<div class="proj-btn-wrap"><a href="${p.link}" target="_blank" class="proj-btn">${p.btnText}</a></div>` : '<div class="proj-btn-wrap"></div>'}
     `;
 
     if (isActive && isRight) {
