@@ -162,10 +162,12 @@ function renderProyectos() {
 
     const item = document.createElement('div');
     item.className = 'proj-item' + (isActive ? ' expanded' : '');
-    item.innerHTML = `
+  item.innerHTML = `
       ${isActive && p.video
         ? `<iframe src="https://www.youtube.com/embed/${p.video}?autoplay=1" frameborder="0" allow="autoplay; fullscreen" allowfullscreen style="width:100%;height:100%;position:absolute;top:0;left:0;"></iframe>`
-        : `<img src="${p.src}" alt="${p.titulo}" />`
+        : p.video
+          ? `<img src="${p.src}" alt="${p.titulo}" />`
+          : `<img src="${p.src}" alt="${p.titulo}" />`
       }
       ${!isActive ? '<div class="overlay"><div class="overlay-icon">+</div></div>' : ''}
     `;
