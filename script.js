@@ -54,6 +54,9 @@ const cats = [
     { icon: di('photoshop-plain'), start:2022, lv:1 },
     { icon: di('illustrator-plain'), start:2021, lv:2 },
     { icon: di('premierepro-plain'), start:2022, lv:3 },
+    { icon: li('After Effects.png'), start:2022, lv:2 },
+
+    
   ]},
   { title:'// Repositorios', items:[
     { icon: di('github-original'), start:2021, lv:3 },
