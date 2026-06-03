@@ -51,7 +51,7 @@ const cats = [
     { icon: li('powerpoint.png'), start:2018, lv:4 },
   ]},
   { title:'// Adobe', items:[
-    { icon: di('photoshop-plain'), start:2022, lv:1 },
+    { icon: di('photoshop-plain'), start:2022, lv:3 },
     { icon: di('illustrator-plain'), start:2021, lv:2 },
     { icon: di('premierepro-plain'), start:2022, lv:3 },
     { icon: li('After Effects.png'), start:2022, lv:2 },
@@ -146,7 +146,7 @@ const proyectos = [
   { id:2, src:'imagenes/CrabSaviors.png', titulo:'Crab Savior', tag:'Puzzles', desc:'Pequeño juego web de puzzles. Controlas a dos cangrejos, pero cada uno solo puede moverse en un eje. Para este proyecto me encargue de todo el diseño de puzzles/niveles, y la programación de las mecanicas. Es un juego desarrollado en construct', link:'https://jose-antonio-reyes.itch.io/crab-savior', btnText:'Jugar' },
   { id:3, src:'imagenes/Calculadora_img.png', titulo:'Calculadora en C++', tag:'Programación', desc:'Calculadora matemática con varias funciones desarrollada en C++. Ejemplo de programación orientada a objetos y de limpieza de codigo.', link:'https://drive.google.com/drive/folders/14LZ5yzBBFvCA0rr3MJ0UX99Q0Pf9PpYg?usp=sharing', btnText:'Descargar Proyecto' },
   { id:4, src:'imagenes/BajoTuPiel.jpeg', titulo:'Bajo tu piel', tag:'Largometraje', desc:'Auxiliar de producción en el largometraje documental "Bajo tu piel". Un documental que combina imagen real, teatro y animación explorando desde un punto de vista historico las desapariciones ocurridas en España durante el franquismo y la guerra civil.', link:'https://www.esperanzafilms.es/bajo-tu-piel', btnText:'Web Productora' },
-  { id:5, src:'https://vfx.ecam.es/formacion-fundamental-a-la-carta/', titulo:'VFX en ECAM', tag:'Formación avanzada', desc:'Formacion avanzada en VFX especialido en Cine y efectos especiales. Dentro he cursado especialidad en Motion Graphics, Photoshop y After effects  ', link:null, btnText:null},
+  { id:5, src:'VFXECAM.png', titulo:'VFX en ECAM', tag:'Formación avanzada', desc:'Formacion avanzada en VFX especialido en Cine y efectos especiales. Dentro he cursado especialidad en Motion Graphics, Photoshop y After effects  ', link:null, btnText:null},
 
   
 ];
